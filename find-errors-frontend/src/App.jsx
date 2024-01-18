@@ -9,6 +9,7 @@ function App() {
   const logout = () => {
     setUserData(null);
   };
+  // console.log('Hvad er userData?', userData);
 
   return (
     <>

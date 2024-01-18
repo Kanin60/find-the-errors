@@ -37,7 +37,7 @@ export const LoginForm = ({ setUserData }) => {
       </span>
       <h1>Welcome</h1>
       <p>{isSignIn ? "Please log in to continue" : "Sign up here"}</p>
-      <b>{feedbackMsg}</b>
+      <b>{feedbackMsg && feedbackMsg}</b>
       <form onSubmit={(e) => submitAction(e)}>
         {!isSignIn && (
           <InputField
@@ -59,7 +59,10 @@ export const LoginForm = ({ setUserData }) => {
           placeholder="enter password"
           label={true}
         />
-        <InputField type="button" name="Submit" />
+        <InputField
+          type="submit"
+          name="Submit"
+          placeholder='submit' />
       </form>
     </div>
   );
